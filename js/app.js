@@ -37,5 +37,40 @@
         todo.completed = !todo.completed;
         this.displayTodos();
 
+    },
+    toggleAll: function(){
+        var totalTodos = this.todos.length;
+        var completedTodos = 0;
+        //Get number of completed todos
+        for(var i =0;i < totalTodos;i++){
+            if(this.todos[i].completed === true){
+                completedTodos++;
+            }
+        }
+        if(completedTodos === totalTodos){
+            for(var i = 0;i < totalTodos;i++){
+                this.todos[i].completed = false;
+            }
+        }else{
+            for(var i =0;i < totalTodos;i++){
+                this.todos[i].completed = true;
+            }
+        }
+        this.displayTodos();
     }
 };
+//+++++++++++++++ 
+var displayTodosButton = document.getElementById("displayTodosBtn");
+var toggleAllButton = document.getElementById("toggleAllBtn");
+
+//++++++++++++++
+displayTodosButton.addEventListener('click',function(){
+	todoList.displayTodos();
+});
+toggleAllButton.addEventListener('click',function(){
+	todoList.toggleAll();
+});
+
+
+
+
