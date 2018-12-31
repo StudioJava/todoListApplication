@@ -59,17 +59,16 @@
         this.displayTodos();
     }
 };
-//+++++++++++++++ 
-var displayTodosButton = document.getElementById("displayTodosBtn");
-var toggleAllButton = document.getElementById("toggleAllBtn");
-
-//++++++++++++++
-displayTodosButton.addEventListener('click',function(){
+//+++++++++++++++
+var handlers = {
+	displayTodos: function(){
 	todoList.displayTodos();
-});
-toggleAllButton.addEventListener('click',function(){
+},
+	toggleAll: function(){
 	todoList.toggleAll();
-});
+}
+};
+//+++++++++++++++ 
 
 
 
