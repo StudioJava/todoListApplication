@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body {
+    height: 100%;
+    background-color: greenyellow;
+    margin: 0px auto;
+}
+.deleteButton {
+    font-size: 10px;
+    margin-left: 10px;
+    font-style: italic;
+}
