@@ -15,15 +15,20 @@ html, body {
     background-color: greenyellow;
     margin: 0px auto;
 }
+	.deleteButton{
+    font-size: 10px;
+    margin-left: 10px;
+    font-style: italic;
+	}
 </style>
 </head>
 <body>
 <!-- body code goes here -->
-<div class="container d-flex flex-column justify-content-around p-0 text-center" style="height: 250px;background-color: rgba(114,192,242,1.00);max-width: 42em;">
+<div class="container d-flex flex-column justify-content-around p-0 text-center" style="height: 380px;background-color: rgba(114,192,242,1.00);max-width: 42em;">
   <h1 class="lead">Todo List</h1>
   <div class="wrapper d-flex justify-content-around">
-    <button onClick="handlers.displayTodos()" class="btn btn-dark w-25">Display</button>
-    <button onClick="handlers.toggleAll()" class="btn btn-dark w-25">Toggle</button>
+    
+    <button onClick="handlers.toggleAll()" class="btn btn-dark w-25">Toggle All</button>
   </div>
   <div class="wrapper d-flex justify-content-start ml-5">
     <button class="btn btn-danger mr-3"><i class="far fa-plus-square" onClick="handlers.addTodo()"></i></button>
@@ -43,6 +48,13 @@ html, body {
 		<input style="width: 80px; margin-right: 10px;" id="toggleCompletedPositionInput" type="number" placeholder="Item #">
 			
 </div>
+	
+	</div>
+	<div style="background-color: aliceblue" class="container">
+	<div class="wrapper ml-5 pt-3 pb-3">
+		<ul>
+		</ul>
+		</div>
 	</div>
 
 <!--<div class="container  h-100">
